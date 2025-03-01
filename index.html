@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="query.css" />
+    <title>Tesla Model 3</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#hero" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#specs" class="nav__link">Specs</a>
+          </li>
+          <li class="nav__item">
+            <a href="#configure" class="nav__link">Configure</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo-container">TESLA</div>
+    </header>
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__text">
+          <h1 class="hero__heading">Model 3</h1>
+          <p class="hero__tagline">Drive the Future</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" id="order-btn">Order Now</button>
+            <button class="btn btn--secondary" id="learn-more-btn">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="specs" id="specs">
+        <div class="spec">
+          <h2 class="spec__value">3.1s</h2>
+          <p class="spec__label">0-60 mph</p>
+        </div>
+        <div class="spec">
+          <h2 class="spec__value">358 mi</h2>
+          <p class="spec__label">Range</p>
+        </div>
+        <div class="spec">
+          <h2 class="spec__value">162 mph</h2>
+          <p class="spec__label">Top Speed</p>
+        </div>
+      </section>
+      <section class="configure" id="configure">
+        <h2 class="configure__title">Design Your Model 3</h2>
+        <button class="btn btn--configure" id="config-btn">
+          Configure Now
+        </button>
+      </section>
+      <section class="about" id="about">
+        <h2 class="about__title">About Tesla</h2>
+        <p class="about__text">
+          Tesla is accelerating the world's transition to sustainable energy
+          with electric cars, solar, and integrated renewable energy solutions.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>© 2025 Tesla Clone. Not affiliated with Tesla, Inc.</p>
+    </footer>
+
+    <!-- Configurator Modal -->
+    <div class="modal" id="config-modal">
+      <div class="modal__content">
+        <span class="modal__close" id="close-config-modal">×</span>
+        <h2 class="modal__heading">Configure Your Model 3</h2>
+        <div class="configurator">
+          <div class="config__column">
+            <label for="color" class="config__label">Color ($):</label>
+            <select id="color" class="config__select" data-price="0">
+              <option value="white" data-price="0">
+                Pearl White - Included
+              </option>
+              <option value="black" data-price="1000">
+                Solid Black - $1,000
+              </option>
+              <option value="silver" data-price="1500">
+                Midnight Silver - $1,500
+              </option>
+            </select>
+
+            <label for="wheels" class="config__label">Wheels ($):</label>
+            <select id="wheels" class="config__select" data-price="0">
+              <option value="19-aero" data-price="0">
+                19" Aero - Included
+              </option>
+              <option value="20-sport" data-price="2000">
+                20" Sport - $2,000
+              </option>
+            </select>
+
+            <label for="interior" class="config__label">Interior ($):</label>
+            <select id="interior" class="config__select" data-price="0">
+              <option value="black" data-price="0">Black - Included</option>
+              <option value="white" data-price="1500">White - $1,500</option>
+            </select>
+
+            <label for="autopilot" class="config__label">Autopilot ($):</label>
+            <select id="autopilot" class="config__select" data-price="0">
+              <option value="basic" data-price="0">Basic - Included</option>
+              <option value="full" data-price="8000">
+                Full Self-Driving - $8,000
+              </option>
+            </select>
+          </div>
+          <div class="config__column">
+            <label for="performance" class="config__label"
+              >Performance ($):</label
+            >
+            <select id="performance" class="config__select" data-price="0">
+              <option value="standard" data-price="0">
+                Standard - Included
+              </option>
+              <option value="performance" data-price="10000">
+                Performance - $10,000
+              </option>
+            </select>
+
+            <label for="range" class="config__label">Range Upgrade ($):</label>
+            <select id="range" class="config__select" data-price="0">
+              <option value="standard" data-price="0">
+                Standard - Included
+              </option>
+              <option value="long" data-price="5000">
+                Long Range - $5,000
+              </option>
+            </select>
+
+            <label for="charging" class="config__label">Charging ($):</label>
+            <select id="charging" class="config__select" data-price="0">
+              <option value="standard" data-price="0">
+                Standard - Included
+              </option>
+              <option value="supercharger" data-price="500">
+                Supercharger Access - $500
+              </option>
+            </select>
+
+            <label for="accessories" class="config__label"
+              >Accessories ($):</label
+            >
+            <select id="accessories" class="config__select" data-price="0">
+              <option value="none" data-price="0">None - Included</option>
+              <option value="premium" data-price="2000">
+                Premium Package - $2,000
+              </option>
+            </select>
+          </div>
+        </div>
+        <p>Total Price: <span id="total-price">0</span></p>
+        <button class="btn btn--apply" id="apply-config">
+          Apply Configuration
+        </button>
+      </div>
+    </div>
+
+    <!-- Configure Prompt Modal -->
+    <div class="modal" id="prompt-modal">
+      <div class="modal__content">
+        <span class="modal__close" id="close-prompt-modal">×</span>
+        <h2 class="modal__heading">Configuration Required</h2>
+        <p>Please configure your Model 3 before ordering.</p>
+        <button class="btn btn--configure" id="go-to-config">
+          Configure Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Order Form Modal -->
+    <div class="modal" id="order-modal">
+      <div class="modal__content">
+        <span class="modal__close" id="close-order-modal">×</span>
+        <h2 class="modal__heading">Order Your Model 3</h2>
+        <form class="order-form" id="order-form">
+          <label for="name" class="order__label">Name:</label>
+          <input type="text" id="name" class="order__input" required />
+
+          <label for="address" class="order__label">Address:</label>
+          <input type="text" id="address" class="order__input" required />
+
+          <label for="location" class="order__label">Location:</label>
+          <input type="text" id="location" class="order__input" required />
+
+          <button type="submit" class="btn btn--submit">Submit Order</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
